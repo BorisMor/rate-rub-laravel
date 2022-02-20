@@ -6,12 +6,13 @@
 - make build
 - make start
 - make composer-install
+- cp .env.dev .env
 - make key-generate
 
 ### Сохранить курсы валют
 Зайти в контейнер `make ssh`\
 Выполнить команды:
-- php artisan migrated
+- php artisan migrate
 - php artisan rate:period 60
 
 Последняя команда заберет курсы за  последние 60 дней.
