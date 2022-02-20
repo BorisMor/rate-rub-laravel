@@ -11,6 +11,12 @@
 |
 */
 
+use App\Http\Controllers\RateController;
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/getRate/{currency?}/{date?}', [
+    RateController::class, RateController::ACTION_RATE_ON_DATE
+]);
